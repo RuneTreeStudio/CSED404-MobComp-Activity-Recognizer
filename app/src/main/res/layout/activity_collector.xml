@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student ID:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_student_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student ID"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:text="20201234" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Activity Class:"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_activity_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/rb_other">
+
+            <RadioButton
+                android:id="@+id/rb_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0: Other" />
+
+            <RadioButton
+                android:id="@+id/rb_walking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1: Walking" />
+
+            <RadioButton
+                android:id="@+id/rb_running"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2: Running" />
+
+            <RadioButton
+                android:id="@+id/rb_standing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3: Standing" />
+
+            <RadioButton
+                android:id="@+id/rb_sitting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4: Sitting" />
+
+            <RadioButton
+                android:id="@+id/rb_upstairs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5: Upstairs" />
+
+            <RadioButton
+                android:id="@+id/rb_downstairs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6: Downstairs" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Status:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current State: IDLE" />
+
+        <TextView
+            android:id="@+id/tv_valid_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Real-time Duration: 00:00" />
+
+        <TextView
+            android:id="@+id/tv_total_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Valid: 00:00" />
+
+        <TextView
+            android:id="@+id/tv_sampling_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sampling Rate: -- Hz" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_start_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start" />
+
+            <Button
+                android:id="@+id/btn_pause_resume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Pause" />
+
+            <Button
+                android:id="@+id/btn_discard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discard" />
+
+            <Button
+                android:id="@+id/btn_export_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Export Dataset (.zip)" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
